@@ -1,0 +1,105 @@
+Cereal   3
+Jam      2 
+Eggs     4
+Butter   5
+Bread    6
+Milk     7
+
+-------------------------------------------------------
+Phase 1:
+-------------------------------------------------------
+L1: 
+         Actual support >= Min MIS element in whole List (Cereal)
+
+Milk, Bread, Eggs, Butter, Jam, Cereal
+
+-------------------------------------------------------
+F1:
+         Actual Support >= Own MIS
+
+Milk, Bread, Butter, Cereal
+
+
+
+
+
+Phase 2:
+-------------------------------------------------------
+Make this Table From L1
+-------------------------------------------------------
+Milk, Bread    5 
+Milk Eggs      3 
+Milk, Butter   4
+Milk, Jam      0
+Milk, Cereal   1
+Bread, Eggs    2
+Bread, Butter  4
+Bread, Jam     0
+Bread, Cereal  1
+Eggs, Butter   2
+Eggs, Jam      1
+Eggs, Cereal   0
+Butter, Jam    0
+Butter, Cereal 0
+Jam, Cereal    1
+
+-------------------------------------------------------
+
+L2:
+1) Actual support Minimum Support sy Zaida walay elements
+2) φ = 10%  
+-------------------------------------------------------
+
+1)(Milk aur bread ka support dahka, Kam bread ka hy, And is equal or greater to Actual support)
+
+A,B ==> SEE WHICH HAS LOWEST MIS AMOUNG A & B ==> ACTUAL Support >= MIS 
+
+
+Milk, Bread
+Milk, Butter
+Milk, Cereal
+Bread, Butter
+Bread, Cereal
+Jam, Cereal
+-------------------------------------------------------
+2) Difference of Actual Support should be equal to or less than Phi value
+
+φ >=  | Difference of Actual Support of Both Items |
+
+Milk, Bread (7 - 6 = 1)  *
+Milk, Butter (7 - 5 = 2)
+Milk, Cereal (4) 
+Bread, Butter (1) *
+Bread, Cereal (3)
+Jam, Cereal (1) *
+
+
+
+F2: 
+Bread, Butter
+Jam, Cereal
+Milk, Bread
+
+
+--------------------------------------
+Association Rules
+--------------------------------------
+Conf ==>  A,B
+         -----
+           A
+
+Bread -> Butter  4 / 6 = 66.7%
+Butter -> Bread  4/ 5 =  80%
+Jam -> Cereal    1 / 2 =  50%
+Cereal -> Jam   1/ 3 =  33.4%
+Milk -> Bread   5 / 7 =  71.4%
+Bread -> Milk   5 / 6 = 83.3%
+
+Jo Minimum Conf sy upper hain (50%)
+
+
+Bread -> Butter  4 / 6 = 66.7%
+Butter -> Bread  4/ 5 =  80%
+Jam -> Cereal    1 / 2 =  50%
+Milk -> Bread   5 / 7 =  71.4%
+Bread -> Milk   5 / 6 = 83.3%
